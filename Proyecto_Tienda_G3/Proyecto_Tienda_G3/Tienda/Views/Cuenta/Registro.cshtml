@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Registro";
+    ViewBag.Title = Textos.Cuenta_RegistroTitulo;
 }
 
 <div class="section auth-section">
@@ -8,46 +8,46 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="auth-card">
                     <div class="auth-header text-center">
-                        <h2>Crear Cuenta</h2>
-                        <p>Regístrese para comprar ropa, accesorios y productos disponibles en nuestra tienda.</p>
+                        <h2>@Textos.Cuenta_CrearCuenta</h2>
+                        <p>@Textos.Cuenta_RegistroTexto</p>
                     </div>
 
                     <form>
                         <div class="form-group">
-                            <label>Nombre completo</label>
-                            <input class="input" type="text" placeholder="Ingrese su nombre completo">
+                            <label>@Textos.Cuenta_NombreCompleto</label>
+                            <input class="input" type="text" placeholder="@Textos.Cuenta_IngreseNombre">
                         </div>
 
                         <div class="form-group">
-                            <label>Correo electrónico</label>
-                            <input class="input" type="email" placeholder="ejemplo@correo.com">
+                            <label>@Textos.Comun_CorreoElectronico</label>
+                            <input class="input" type="email" placeholder="@Textos.Comun_CorreoEjemplo">
                         </div>
 
                         <div class="form-group">
-                            <label>Teléfono</label>
+                            <label>@Textos.Comun_Telefono</label>
                             <input class="input" type="tel" placeholder="8888-8888">
                         </div>
 
                         <div class="form-group">
-                            <label>Dirección</label>
-                            <input class="input" type="text" placeholder="Ingrese su dirección">
+                            <label>@Textos.Comun_Direccion</label>
+                            <input class="input" type="text" placeholder="@Textos.Cuenta_IngreseDireccion">
                         </div>
 
                         <div class="form-group">
-                            <label>Contraseña</label>
-                            <input class="input" type="password" placeholder="Cree una contraseña">
+                            <label>@Textos.Comun_Contrasena</label>
+                            <input class="input" type="password" placeholder="@Textos.Cuenta_CreeContrasena">
                         </div>
 
                         <div class="form-group">
-                            <label>Confirmar contraseña</label>
-                            <input class="input" type="password" placeholder="Repita su contraseña">
+                            <label>@Textos.Cuenta_ConfirmarContrasena</label>
+                            <input class="input" type="password" placeholder="@Textos.Cuenta_RepitaContrasena">
                         </div>
 
-                        <button type="button" class="primary-btn auth-btn">Registrarme</button>
+                        <button type="button" class="primary-btn auth-btn">@Textos.Cuenta_Registrarme</button>
 
                         <div class="auth-links text-center">
-                            <span>¿Ya tiene cuenta?</span>
-                            <a href="@Url.Action("Login", "Cuenta")">Iniciar sesión</a>
+                            <span>@Textos.Cuenta_YaTieneCuenta</span>
+                            <a href="@Url.Action("Login", "Cuenta")">@Textos.Comun_IniciarSesion</a>
                         </div>
                     </form>
                 </div>

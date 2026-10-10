@@ -21,3 +21,5 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+# Respaldo local de las imágenes originales (pesa ~138 MB, no se sube)
+RespaldoImagenesOriginales.zip

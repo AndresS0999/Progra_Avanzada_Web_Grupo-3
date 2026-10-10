@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Comun_Inicio" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Comun_TodasCategorias" xml:space="preserve">
+    <value>Todas las categorías</value>
+  </data>
+  <data name="Comun_Categorias" xml:space="preserve">
+    <value>Categorías</value>
+  </data>
+  <data name="Comun_Categoria" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="Comun_NombreProducto" xml:space="preserve">
+    <value>Nombre del producto</value>
+  </data>
+  <data name="Comun_Nuevo" xml:space="preserve">
+    <value>NUEVO</value>
+  </data>
+  <data name="Comun_AgregarCarrito" xml:space="preserve">
+    <value>Agregar al carrito</value>
+  </data>
+  <data name="Comun_AgregarFavoritos" xml:space="preserve">
+    <value>Agregar a favoritos</value>
+  </data>
+  <data name="Comun_AgregarComparar" xml:space="preserve">
+    <value>Agregar para comparar</value>
+  </data>
+  <data name="Comun_VistaRapida" xml:space="preserve">
+    <value>Vista rápida</value>
+  </data>
+  <data name="Comun_Laptops" xml:space="preserve">
+    <value>Laptops</value>
+  </data>
+  <data name="Comun_Smartphones" xml:space="preserve">
+    <value>Smartphones</value>
+  </data>
+  <data name="Comun_Camaras" xml:space="preserve">
+    <value>Cámaras</value>
+  </data>
+  <data name="Comun_Accesorios" xml:space="preserve">
+    <value>Accesorios</value>
+  </data>
+  <data name="Comun_Audifonos" xml:space="preserve">
+    <value>Audífonos</value>
+  </data>
+  <data name="Comun_Maquillaje" xml:space="preserve">
+    <value>Maquillaje</value>
+  </data>
+  <data name="Comun_CuidadoFacial" xml:space="preserve">
+    <value>Cuidado facial</value>
+  </data>
+  <data name="Comun_Ofertas" xml:space="preserve">
+    <value>Ofertas</value>
+  </data>
+  <data name="Comun_MiCuenta" xml:space="preserve">
+    <value>Mi cuenta</value>
+  </data>
+  <data name="Comun_VerCarrito" xml:space="preserve">
+    <value>Ver carrito</value>
+  </data>
+  <data name="Comun_Favoritos" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="Comun_Carrito" xml:space="preserve">
+    <value>Carrito</value>
+  </data>
+  <data name="Comun_Pagar" xml:space="preserve">
+    <value>Pagar</value>
+  </data>
+  <data name="Comun_CorreoElectronico" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="Comun_CorreoEjemplo" xml:space="preserve">
+    <value>ejemplo@correo.com</value>
+  </data>
+  <data name="Comun_Contrasena" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Comun_IngreseContrasena" xml:space="preserve">
+    <value>Ingrese su contraseña</value>
+  </data>
+  <data name="Comun_IniciarSesion" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="Comun_Telefono" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="Comun_Direccion" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="Comun_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Layout_IrAlInicio" xml:space="preserve">
+    <value>Ir al inicio</value>
+  </data>
+  <data name="Layout_VolverInicio" xml:space="preserve">
+    <value>Volver al inicio</value>
+  </data>
+  <data name="Layout_CambiarIdioma" xml:space="preserve">
+    <value>Cambiar idioma</value>
+  </data>
+  <data name="Layout_CambiarMoneda" xml:space="preserve">
+    <value>Cambiar moneda</value>
+  </data>
+  <data name="Layout_Moneda_USD" xml:space="preserve">
+    <value>Dólar estadounidense</value>
+  </data>
+  <data name="Layout_Moneda_CRC" xml:space="preserve">
+    <value>Colón costarricense</value>
+  </data>
+  <data name="Layout_Moneda_EUR" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="Layout_Moneda_MXN" xml:space="preserve">
+    <value>Peso mexicano</value>
+  </data>
+  <data name="Layout_BuscarProducto" xml:space="preserve">
+    <value>Buscar producto...</value>
+  </data>
+  <data name="Layout_Buscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Layout_Categoria01" xml:space="preserve">
+    <value>Categoría 01</value>
+  </data>
+  <data name="Layout_Categoria02" xml:space="preserve">
+    <value>Categoría 02</value>
+  </data>
+  <data name="Layout_ArticulosSeleccionados" xml:space="preserve">
+    <value>{0} artículo(s) seleccionado(s)</value>
+  </data>
+  <data name="Layout_Subtotal" xml:space="preserve">
+    <value>SUBTOTAL</value>
+  </data>
+  <data name="Layout_Menu" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="Layout_SobreNosotros" xml:space="preserve">
+    <value>Sobre nosotros</value>
+  </data>
+  <data name="Layout_SobreNosotrosTexto" xml:space="preserve">
+    <value>Productos de belleza seleccionados para resaltar tu estilo y acompañar tu rutina.</value>
+  </data>
+  <data name="Layout_Informacion" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="Layout_Contactenos" xml:space="preserve">
+    <value>Contáctenos</value>
+  </data>
+  <data name="Layout_PoliticaPrivacidad" xml:space="preserve">
+    <value>Política de privacidad</value>
+  </data>
+  <data name="Layout_PedidosDevoluciones" xml:space="preserve">
+    <value>Pedidos y devoluciones</value>
+  </data>
+  <data name="Layout_TerminosCondiciones" xml:space="preserve">
+    <value>Términos y condiciones</value>
+  </data>
+  <data name="Layout_Servicio" xml:space="preserve">
+    <value>Servicio</value>
+  </data>
+  <data name="Layout_RastrearPedido" xml:space="preserve">
+    <value>Rastrear mi pedido</value>
+  </data>
+  <data name="Layout_Ayuda" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Inicio_HeroTitulo" xml:space="preserve">
+    <value>Belleza para</value>
+  </data>
+  <data name="Inicio_HeroTituloResaltado" xml:space="preserve">
+    <value>cada versión de ti.</value>
+  </data>
+  <data name="Inicio_HeroTexto" xml:space="preserve">
+    <value>Descubrí maquillaje, cuidado facial y accesorios seleccionados para complementar tu estilo.</value>
+  </data>
+  <data name="Inicio_ExplorarProductos" xml:space="preserve">
+    <value>Explorar productos</value>
+  </data>
+  <data name="Inicio_EncontraTuEstilo" xml:space="preserve">
+    <value>ENCONTRÁ TU ESTILO</value>
+  </data>
+  <data name="Inicio_ExploraCategorias" xml:space="preserve">
+    <value>Explorá nuestras categorías</value>
+  </data>
+  <data name="Inicio_ExplorarCatalogo" xml:space="preserve">
+    <value>Explorar catálogo</value>
+  </data>
+  <data name="Inicio_CategoriaMaquillajeDesc" xml:space="preserve">
+    <value>Resaltá tu estilo</value>
+  </data>
+  <data name="Inicio_CategoriaFacialDesc" xml:space="preserve">
+    <value>Un momento para vos</value>
+  </data>
+  <data name="Inicio_CategoriaAccesoriosDesc" xml:space="preserve">
+    <value>Complementá tu rutina</value>
+  </data>
+  <data name="Inicio_SeleccionParaVos" xml:space="preserve">
+    <value>UNA SELECCIÓN PARA VOS</value>
+  </data>
+  <data name="Inicio_ProductosDestacados" xml:space="preserve">
+    <value>Productos destacados</value>
+  </data>
+  <data name="Inicio_VerCatalogo" xml:space="preserve">
+    <value>Ver catálogo</value>
+  </data>
+  <data name="Inicio_Disponible" xml:space="preserve">
+    <value>Disponible</value>
+  </data>
+  <data name="Inicio_VerEnCatalogo" xml:space="preserve">
+    <value>Ver en el catálogo</value>
+  </data>
+  <data name="Inicio_CierreTitulo" xml:space="preserve">
+    <value>Tu estilo, tu esencia.</value>
+  </data>
+  <data name="Inicio_CierreTexto" xml:space="preserve">
+    <value>Encontrá esos pequeños detalles que hacen especial tu rutina de belleza.</value>
+  </data>
+  <data name="Inicio_VerTodos" xml:space="preserve">
+    <value>Ver todos los productos</value>
+  </data>
+  <data name="Inicio_ProductoLabial" xml:space="preserve">
+    <value>Labial mate</value>
+  </data>
+  <data name="Inicio_ProductoPaleta" xml:space="preserve">
+    <value>Paleta de sombras</value>
+  </data>
+  <data name="Inicio_ProductoBase" xml:space="preserve">
+    <value>Base de maquillaje</value>
+  </data>
+  <data name="Inicio_ProductoBrochas" xml:space="preserve">
+    <value>Set de brochas</value>
+  </data>
+  <data name="Inicio_CategoriaLabios" xml:space="preserve">
+    <value>Labios</value>
+  </data>
+  <data name="Inicio_CategoriaOjos" xml:space="preserve">
+    <value>Ojos</value>
+  </data>
+  <data name="Inicio_CategoriaRostro" xml:space="preserve">
+    <value>Rostro</value>
+  </data>
+  <data name="Productos_Titulo" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+  <data name="Productos_Resultados" xml:space="preserve">
+    <value>{0} resultados</value>
+  </data>
+  <data name="Productos_Precio" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Productos_Marca" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="Productos_MasVendidos" xml:space="preserve">
+    <value>Más vendidos</value>
+  </data>
+  <data name="Productos_OrdenarPor" xml:space="preserve">
+    <value>Ordenar por:</value>
+  </data>
+  <data name="Productos_Populares" xml:space="preserve">
+    <value>Populares</value>
+  </data>
+  <data name="Productos_Posicion" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="Productos_Mostrar" xml:space="preserve">
+    <value>Mostrar:</value>
+  </data>
+  <data name="Productos_Mostrando" xml:space="preserve">
+    <value>Mostrando {0}-{1} productos</value>
+  </data>
+  <data name="Detalle_Titulo" xml:space="preserve">
+    <value>Detalle del producto</value>
+  </data>
+  <data name="Detalle_Resenas" xml:space="preserve">
+    <value>{0} reseña(s) | Agregar reseña</value>
+  </data>
+  <data name="Detalle_EnExistencia" xml:space="preserve">
+    <value>En existencia</value>
+  </data>
+  <data name="Detalle_Talla" xml:space="preserve">
+    <value>Talla</value>
+  </data>
+  <data name="Detalle_Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Detalle_Rojo" xml:space="preserve">
+    <value>Rojo</value>
+  </data>
+  <data name="Detalle_Cantidad" xml:space="preserve">
+    <value>Cant.</value>
+  </data>
+  <data name="Detalle_CategoriaEtiqueta" xml:space="preserve">
+    <value>Categoría:</value>
+  </data>
+  <data name="Detalle_Compartir" xml:space="preserve">
+    <value>Compartir:</value>
+  </data>
+  <data name="Detalle_Descripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Detalle_Detalles" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="Detalle_PestanaResenas" xml:space="preserve">
+    <value>Reseñas ({0})</value>
+  </data>
+  <data name="Detalle_SuNombre" xml:space="preserve">
+    <value>Su nombre</value>
+  </data>
+  <data name="Detalle_SuCorreo" xml:space="preserve">
+    <value>Su correo electrónico</value>
+  </data>
+  <data name="Detalle_SuResena" xml:space="preserve">
+    <value>Su reseña</value>
+  </data>
+  <data name="Detalle_SuCalificacion" xml:space="preserve">
+    <value>Su calificación:</value>
+  </data>
+  <data name="Detalle_Enviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Detalle_Relacionados" xml:space="preserve">
+    <value>Productos relacionados</value>
+  </data>
+  <data name="Checkout_Titulo" xml:space="preserve">
+    <value>Pago</value>
+  </data>
+  <data name="Checkout_DireccionFacturacion" xml:space="preserve">
+    <value>Dirección de facturación</value>
+  </data>
+  <data name="Checkout_Nombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Checkout_Apellidos" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Checkout_Ciudad" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="Checkout_Pais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Checkout_CodigoPostal" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Checkout_CrearCuenta" xml:space="preserve">
+    <value>¿Crear cuenta?</value>
+  </data>
+  <data name="Checkout_CrearCuentaTexto" xml:space="preserve">
+    <value>Cree una cuenta con los datos de facturación para comprar más rápido la próxima vez.</value>
+  </data>
+  <data name="Checkout_DireccionEnvio" xml:space="preserve">
+    <value>Dirección de envío</value>
+  </data>
+  <data name="Checkout_EnviarOtraDireccion" xml:space="preserve">
+    <value>¿Enviar a otra dirección?</value>
+  </data>
+  <data name="Checkout_NotasPedido" xml:space="preserve">
+    <value>Notas del pedido</value>
+  </data>
+  <data name="Checkout_SuPedido" xml:space="preserve">
+    <value>Su pedido</value>
+  </data>
+  <data name="Checkout_Producto" xml:space="preserve">
+    <value>PRODUCTO</value>
+  </data>
+  <data name="Checkout_Envio" xml:space="preserve">
+    <value>Envío</value>
+  </data>
+  <data name="Checkout_Gratis" xml:space="preserve">
+    <value>GRATIS</value>
+  </data>
+  <data name="Checkout_Transferencia" xml:space="preserve">
+    <value>Transferencia bancaria</value>
+  </data>
+  <data name="Checkout_TransferenciaTexto" xml:space="preserve">
+    <value>Realice el pago directamente a nuestra cuenta bancaria. El pedido se enviará cuando se confirme el pago.</value>
+  </data>
+  <data name="Checkout_Cheque" xml:space="preserve">
+    <value>Pago con cheque</value>
+  </data>
+  <data name="Checkout_ChequeTexto" xml:space="preserve">
+    <value>Envíe un cheque a nombre de la tienda. El pedido se enviará cuando se reciba el pago.</value>
+  </data>
+  <data name="Checkout_Paypal" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="Checkout_PaypalTexto" xml:space="preserve">
+    <value>Pague con su cuenta de PayPal o con tarjeta de crédito a través de PayPal.</value>
+  </data>
+  <data name="Checkout_AceptoTerminos" xml:space="preserve">
+    <value>He leído y acepto los</value>
+  </data>
+  <data name="Checkout_TerminosCondiciones" xml:space="preserve">
+    <value>términos y condiciones</value>
+  </data>
+  <data name="Checkout_RealizarPedido" xml:space="preserve">
+    <value>Realizar pedido</value>
+  </data>
+  <data name="Cuenta_LoginTexto" xml:space="preserve">
+    <value>Ingrese a su cuenta para continuar comprando en Ágata MakeUp.</value>
+  </data>
+  <data name="Cuenta_Recordarme" xml:space="preserve">
+    <value>Recordarme</value>
+  </data>
+  <data name="Cuenta_Ingresar" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="Cuenta_OlvidoContrasena" xml:space="preserve">
+    <value>¿Olvidó su contraseña?</value>
+  </data>
+  <data name="Cuenta_NoTieneCuenta" xml:space="preserve">
+    <value>¿No tiene cuenta?</value>
+  </data>
+  <data name="Cuenta_CrearCuenta" xml:space="preserve">
+    <value>Crear cuenta</value>
+  </data>
+  <data name="Cuenta_RegistroTitulo" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="Cuenta_RegistroTexto" xml:space="preserve">
+    <value>Regístrese para comprar maquillaje, cuidado facial y accesorios disponibles en nuestra tienda.</value>
+  </data>
+  <data name="Cuenta_NombreCompleto" xml:space="preserve">
+    <value>Nombre completo</value>
+  </data>
+  <data name="Cuenta_IngreseNombre" xml:space="preserve">
+    <value>Ingrese su nombre completo</value>
+  </data>
+  <data name="Cuenta_IngreseDireccion" xml:space="preserve">
+    <value>Ingrese su dirección</value>
+  </data>
+  <data name="Cuenta_CreeContrasena" xml:space="preserve">
+    <value>Cree una contraseña</value>
+  </data>
+  <data name="Cuenta_ConfirmarContrasena" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+  <data name="Cuenta_RepitaContrasena" xml:space="preserve">
+    <value>Repita su contraseña</value>
+  </data>
+  <data name="Cuenta_Registrarme" xml:space="preserve">
+    <value>Registrarme</value>
+  </data>
+  <data name="Cuenta_YaTieneCuenta" xml:space="preserve">
+    <value>¿Ya tiene cuenta?</value>
+  </data>
+  <data name="Cuenta_RecuperarTitulo" xml:space="preserve">
+    <value>Recuperar acceso</value>
+  </data>
+  <data name="Cuenta_RecuperarTexto" xml:space="preserve">
+    <value>Ingrese su correo electrónico para simular la recuperación de contraseña.</value>
+  </data>
+  <data name="Cuenta_EnviarSolicitud" xml:space="preserve">
+    <value>Enviar solicitud</value>
+  </data>
+  <data name="Cuenta_VolverLogin" xml:space="preserve">
+    <value>Volver al inicio de sesión</value>
+  </data>
+  <data name="Cuenta_RecuperarNota" xml:space="preserve">
+    <value>Nota: Esta pantalla es únicamente visual para la práctica. No realiza envío real de correos electrónicos.</value>
+  </data>
+  <data name="Error_Titulo" xml:space="preserve">
+    <value>Error.</value>
+  </data>
+  <data name="Error_Texto" xml:space="preserve">
+    <value>Ocurrió un error al procesar su solicitud.</value>
+  </data>
+</root>

@@ -1,23 +1,23 @@
 ﻿@{
-    ViewBag.Title = "Inicio";
+    ViewBag.Title = Textos.Comun_Inicio;
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     // Datos quemados para el prototipo.
     var categorias = new[]
     {
         new {
-            Nombre = "Maquillaje",
-            Descripcion = "Resaltá tu estilo",
+            Nombre = Textos.Comun_Maquillaje,
+            Descripcion = Textos.Inicio_CategoriaMaquillajeDesc,
             Imagen = "shop01.png"
         },
         new {
-            Nombre = "Cuidado facial",
-            Descripcion = "Un momento para vos",
+            Nombre = Textos.Comun_CuidadoFacial,
+            Descripcion = Textos.Inicio_CategoriaFacialDesc,
             Imagen = "shop02.png"
         },
         new {
-            Nombre = "Accesorios",
-            Descripcion = "Complementá tu rutina",
+            Nombre = Textos.Comun_Accesorios,
+            Descripcion = Textos.Inicio_CategoriaAccesoriosDesc,
             Imagen = "shop03.png"
         }
     };
@@ -25,27 +25,27 @@
     var productos = new[]
     {
         new {
-            Nombre = "Labial mate",
-            Categoria = "Labios",
-            Precio = "₡4 500,00",
+            Nombre = Textos.Inicio_ProductoLabial,
+            Categoria = Textos.Inicio_CategoriaLabios,
+            PrecioCrc = 4500m,
             Imagen = "product01.png"
         },
         new {
-            Nombre = "Paleta de sombras",
-            Categoria = "Ojos",
-            Precio = "₡12 500,00",
+            Nombre = Textos.Inicio_ProductoPaleta,
+            Categoria = Textos.Inicio_CategoriaOjos,
+            PrecioCrc = 12500m,
             Imagen = "product02.png"
         },
         new {
-            Nombre = "Base de maquillaje",
-            Categoria = "Rostro",
-            Precio = "₡8 900,00",
+            Nombre = Textos.Inicio_ProductoBase,
+            Categoria = Textos.Inicio_CategoriaRostro,
+            PrecioCrc = 8900m,
             Imagen = "product03.png"
         },
         new {
-            Nombre = "Set de brochas",
-            Categoria = "Accesorios",
-            Precio = "₡9 500,00",
+            Nombre = Textos.Inicio_ProductoBrochas,
+            Categoria = Textos.Comun_Accesorios,
+            PrecioCrc = 9500m,
             Imagen = "product04.png"
         }
     };
@@ -65,18 +65,17 @@
                         </span>
 
                         <h1>
-                            Belleza para
-                            <span>cada versión de ti.</span>
+                            @Textos.Inicio_HeroTitulo
+                            <span>@Textos.Inicio_HeroTituloResaltado</span>
                         </h1>
 
                         <p>
-                            Descubrí maquillaje, cuidado facial y accesorios
-                            seleccionados para complementar tu estilo.
+                            @Textos.Inicio_HeroTexto
                         </p>
 
                         <a href="@Url.Action("Index", "Productos")"
                            class="home-boton">
-                            Explorar productos
+                            @Textos.Inicio_ExplorarProductos
                             <i class="fa fa-arrow-right"
                                aria-hidden="true"></i>
                         </a>
@@ -102,8 +101,8 @@
 
             <div class="home-titulo">
                 <div>
-                    <span class="home-subtitulo">ENCONTRÁ TU ESTILO</span>
-                    <h2>Explorá nuestras categorías</h2>
+                    <span class="home-subtitulo">@Textos.Inicio_EncontraTuEstilo</span>
+                    <h2>@Textos.Inicio_ExploraCategorias</h2>
                 </div>
             </div>
 
@@ -124,7 +123,7 @@
                                     <span>@categoria.Descripcion</span>
                                     <h3>@categoria.Nombre</h3>
                                     <strong>
-                                        Explorar catálogo →
+                                        @Textos.Inicio_ExplorarCatalogo →
                                     </strong>
                                 </div>
                             </div>
@@ -144,14 +143,14 @@
             <div class="home-titulo">
                 <div>
                     <span class="home-subtitulo">
-                        UNA SELECCIÓN PARA VOS
+                        @Textos.Inicio_SeleccionParaVos
                     </span>
-                    <h2>Productos destacados</h2>
+                    <h2>@Textos.Inicio_ProductosDestacados</h2>
                 </div>
 
                 <a href="@Url.Action("Index", "Productos")"
                    class="home-ver-todos">
-                    Ver catálogo →
+                    @Textos.Inicio_VerCatalogo →
                 </a>
             </div>
 
@@ -171,19 +170,21 @@
                                 <p>@producto.Categoria</p>
                                 <h3>@producto.Nombre</h3>
 
-                                <strong class="home-producto-precio">
-                                    @producto.Precio
+                                @* El precio base está en colones; el selector de moneda lo convierte. *@
+                                <strong class="home-producto-precio"
+                                        data-precio-crc="@producto.PrecioCrc.ToString(System.Globalization.CultureInfo.InvariantCulture)">
+                                    @producto.PrecioCrc.ToString("C", new System.Globalization.CultureInfo("es-CR"))
                                 </strong>
 
                                 <span class="home-disponible">
-                                    Disponible
+                                    @Textos.Inicio_Disponible
                                 </span>
                             </div>
 
                             <div class="home-producto-accion">
                                 <a href="@Url.Action("Index", "Productos")"
                                    class="home-btn-producto">
-                                    Ver en el catálogo
+                                    @Textos.Inicio_VerEnCatalogo
                                     <i class="fa fa-arrow-right"
                                        aria-hidden="true"></i>
                                 </a>
@@ -203,16 +204,15 @@
             <div class="home-cierre-contenido">
                 <span>ÁGATA MAKEUP</span>
 
-                <h2>Tu estilo, tu esencia.</h2>
+                <h2>@Textos.Inicio_CierreTitulo</h2>
 
                 <p>
-                    Encontrá esos pequeños detalles que hacen
-                    especial tu rutina de belleza.
+                    @Textos.Inicio_CierreTexto
                 </p>
 
                 <a href="@Url.Action("Index", "Productos")"
                    class="home-boton">
-                    Ver todos los productos
+                    @Textos.Inicio_VerTodos
                 </a>
             </div>
         </div>

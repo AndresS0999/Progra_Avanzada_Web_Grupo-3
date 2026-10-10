@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Checkout";
+    ViewBag.Title = Textos.Checkout_Titulo;
 }
 
 <!-- BREADCRUMB -->
@@ -9,10 +9,10 @@
         <!-- row -->
         <div class="row">
             <div class="col-md-12">
-                <h3 class="breadcrumb-header">Checkout</h3>
+                <h3 class="breadcrumb-header">@Textos.Checkout_Titulo</h3>
                 <ul class="breadcrumb-tree">
-                    <li><a href="#">Home</a></li>
-                    <li class="active">Checkout</li>
+                    <li><a href="@Url.Action("Index", "Home")">@Textos.Comun_Inicio</a></li>
+                    <li class="active">@Textos.Checkout_Titulo</li>
                 </ul>
             </div>
         </div>
@@ -32,42 +32,42 @@
                 <!-- Billing Details -->
                 <div class="billing-details">
                     <div class="section-title">
-                        <h3 class="title">Billing address</h3>
+                        <h3 class="title">@Textos.Checkout_DireccionFacturacion</h3>
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="first-name" placeholder="First Name">
+                        <input class="input" type="text" name="first-name" placeholder="@Textos.Checkout_Nombre">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="last-name" placeholder="Last Name">
+                        <input class="input" type="text" name="last-name" placeholder="@Textos.Checkout_Apellidos">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="email" name="email" placeholder="Email">
+                        <input class="input" type="email" name="email" placeholder="@Textos.Comun_CorreoElectronico">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="address" placeholder="Address">
+                        <input class="input" type="text" name="address" placeholder="@Textos.Comun_Direccion">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="city" placeholder="City">
+                        <input class="input" type="text" name="city" placeholder="@Textos.Checkout_Ciudad">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="country" placeholder="Country">
+                        <input class="input" type="text" name="country" placeholder="@Textos.Checkout_Pais">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                        <input class="input" type="text" name="zip-code" placeholder="@Textos.Checkout_CodigoPostal">
                     </div>
                     <div class="form-group">
-                        <input class="input" type="tel" name="tel" placeholder="Telephone">
+                        <input class="input" type="tel" name="tel" placeholder="@Textos.Comun_Telefono">
                     </div>
                     <div class="form-group">
                         <div class="input-checkbox">
                             <input type="checkbox" id="create-account">
                             <label for="create-account">
                                 <span></span>
-                                Create Account?
+                                @Textos.Checkout_CrearCuenta
                             </label>
                             <div class="caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                <input class="input" type="password" name="password" placeholder="Enter Your Password">
+                                <p>@Textos.Checkout_CrearCuentaTexto</p>
+                                <input class="input" type="password" name="password" placeholder="@Textos.Comun_IngreseContrasena">
                             </div>
                         </div>
                     </div>
@@ -76,38 +76,38 @@
                 <!-- Shiping Details -->
                 <div class="shiping-details">
                     <div class="section-title">
-                        <h3 class="title">Shiping address</h3>
+                        <h3 class="title">@Textos.Checkout_DireccionEnvio</h3>
                     </div>
                     <div class="input-checkbox">
                         <input type="checkbox" id="shiping-address">
                         <label for="shiping-address">
                             <span></span>
-                            Ship to a diffrent address?
+                            @Textos.Checkout_EnviarOtraDireccion
                         </label>
                         <div class="caption">
                             <div class="form-group">
-                                <input class="input" type="text" name="first-name" placeholder="First Name">
+                                <input class="input" type="text" name="first-name" placeholder="@Textos.Checkout_Nombre">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="text" name="last-name" placeholder="Last Name">
+                                <input class="input" type="text" name="last-name" placeholder="@Textos.Checkout_Apellidos">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="email" name="email" placeholder="Email">
+                                <input class="input" type="email" name="email" placeholder="@Textos.Comun_CorreoElectronico">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="text" name="address" placeholder="Address">
+                                <input class="input" type="text" name="address" placeholder="@Textos.Comun_Direccion">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="text" name="city" placeholder="City">
+                                <input class="input" type="text" name="city" placeholder="@Textos.Checkout_Ciudad">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="text" name="country" placeholder="Country">
+                                <input class="input" type="text" name="country" placeholder="@Textos.Checkout_Pais">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                                <input class="input" type="text" name="zip-code" placeholder="@Textos.Checkout_CodigoPostal">
                             </div>
                             <div class="form-group">
-                                <input class="input" type="tel" name="tel" placeholder="Telephone">
+                                <input class="input" type="tel" name="tel" placeholder="@Textos.Comun_Telefono">
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                 <!-- /Shiping Details -->
                 <!-- Order notes -->
                 <div class="order-notes">
-                    <textarea class="input" placeholder="Order Notes"></textarea>
+                    <textarea class="input" placeholder="@Textos.Checkout_NotasPedido"></textarea>
                 </div>
                 <!-- /Order notes -->
             </div>
@@ -123,29 +123,29 @@
             <!-- Order Details -->
             <div class="col-md-5 order-details">
                 <div class="section-title text-center">
-                    <h3 class="title">Your Order</h3>
+                    <h3 class="title">@Textos.Checkout_SuPedido</h3>
                 </div>
                 <div class="order-summary">
                     <div class="order-col">
-                        <div><strong>PRODUCT</strong></div>
-                        <div><strong>TOTAL</strong></div>
+                        <div><strong>@Textos.Checkout_Producto</strong></div>
+                        <div><strong>@Textos.Comun_Total</strong></div>
                     </div>
                     <div class="order-products">
                         <div class="order-col">
-                            <div>1x Product Name Goes Here</div>
+                            <div>1x @Textos.Comun_NombreProducto</div>
                             <div>$980.00</div>
                         </div>
                         <div class="order-col">
-                            <div>2x Product Name Goes Here</div>
+                            <div>2x @Textos.Comun_NombreProducto</div>
                             <div>$980.00</div>
                         </div>
                     </div>
                     <div class="order-col">
-                        <div>Shiping</div>
-                        <div><strong>FREE</strong></div>
+                        <div>@Textos.Checkout_Envio</div>
+                        <div><strong>@Textos.Checkout_Gratis</strong></div>
                     </div>
                     <div class="order-col">
-                        <div><strong>TOTAL</strong></div>
+                        <div><strong>@Textos.Comun_Total</strong></div>
                         <div><strong class="order-total">$2940.00</strong></div>
                     </div>
                 </div>
@@ -154,30 +154,30 @@
                         <input type="radio" name="payment" id="payment-1">
                         <label for="payment-1">
                             <span></span>
-                            Direct Bank Transfer
+                            @Textos.Checkout_Transferencia
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>@Textos.Checkout_TransferenciaTexto</p>
                         </div>
                     </div>
                     <div class="input-radio">
                         <input type="radio" name="payment" id="payment-2">
                         <label for="payment-2">
                             <span></span>
-                            Cheque Payment
+                            @Textos.Checkout_Cheque
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>@Textos.Checkout_ChequeTexto</p>
                         </div>
                     </div>
                     <div class="input-radio">
                         <input type="radio" name="payment" id="payment-3">
                         <label for="payment-3">
                             <span></span>
-                            Paypal System
+                            @Textos.Checkout_Paypal
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>@Textos.Checkout_PaypalTexto</p>
                         </div>
                     </div>
                 </div>
@@ -185,10 +185,10 @@
                     <input type="checkbox" id="terms">
                     <label for="terms">
                         <span></span>
-                        I've read and accept the <a href="#">terms & conditions</a>
+                        @Textos.Checkout_AceptoTerminos <a href="#">@Textos.Checkout_TerminosCondiciones</a>
                     </label>
                 </div>
-                <a href="#" class="primary-btn order-submit">Place order</a>
+                <a href="#" class="primary-btn order-submit">@Textos.Checkout_RealizarPedido</a>
             </div>
             <!-- /Order Details -->
         </div>

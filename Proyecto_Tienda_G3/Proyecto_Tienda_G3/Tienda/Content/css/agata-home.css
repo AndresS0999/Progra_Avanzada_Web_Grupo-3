@@ -365,3 +365,169 @@
         height: 260px;
     }
 }
+
+/* Encabezado: enlaces superiores y Favoritos/Carrito pegados a los bordes */
+#top-header .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+    #header {
+        position: relative;
+    }
+
+        /* Las columnas de Bootstrap son relative; se anulan para que el
+           bloque se ubique respecto al encabezado completo. */
+        #header .row > [class*="col-"] {
+            position: static;
+        }
+
+        #header .header-ctn {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+        }
+}
+
+/* Flecha para volver al inicio (páginas sin encabezado, como el Login) */
+.volver-inicio {
+    padding: 20px 30px 0;
+}
+
+    .volver-inicio a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #f8dce6;
+        color: #3a2a2f;
+        font-size: 18px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+        .volver-inicio a:hover,
+        .volver-inicio a:focus {
+            background-color: #ff5b9a;
+            color: #fff;
+        }
+
+/* Selectores de moneda e idioma en la barra superior */
+.selector-header {
+    position: relative;
+}
+
+    .selector-header .selector-caret {
+        margin-left: 3px;
+        margin-right: 0;
+    }
+
+    .selector-header .dropdown-menu {
+        min-width: 140px;
+        margin-top: 10px;
+        padding: 6px 0;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(58, 42, 47, 0.15);
+        z-index: 1000;
+    }
+
+        .selector-header .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+
+            .selector-header .dropdown-menu li a {
+                display: block;
+                padding: 8px 16px;
+                color: #3a2a2f;
+            }
+
+                .selector-header .dropdown-menu li a:hover,
+                .selector-header .dropdown-menu li a:focus {
+                    background-color: #f8dce6;
+                    color: #ff5b9a;
+                }
+
+    .selector-moneda .dropdown-menu {
+        min-width: 230px;
+    }
+
+/* Símbolo del colón: Font Awesome 4 no tiene ícono propio */
+.simbolo-colon {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Imágenes de producto con el mismo tamaño en todo el sitio:
+   cuadradas y recortadas al centro, sin importar el tamaño original. */
+.product .product-img > img,
+.product-widget .product-img > img,
+#product-main-img .product-preview img,
+#product-imgs .product-preview img,
+.agata-inicio .home-producto-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    background-color: #fff;
+}
+
+.agata-inicio .home-producto-imagen {
+    height: auto;
+}
+
+/* Hover de Favoritos y Carrito en el encabezado */
+.header-ctn > div > a {
+    padding: 6px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .header-ctn > div > a > i {
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .header-ctn > div > a > .qty {
+        transition: transform 0.2s ease;
+    }
+
+    .header-ctn > div > a:hover,
+    .header-ctn > div > a:focus,
+    .header-ctn > .dropdown.open > a {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #ff5b9a;
+        text-decoration: none;
+    }
+
+        .header-ctn > div > a:hover > i,
+        .header-ctn > div > a:focus > i,
+        .header-ctn > .dropdown.open > a > i {
+            color: #ff5b9a;
+            transform: translateY(-3px);
+        }
+
+        .header-ctn > div > a:hover > .qty,
+        .header-ctn > div > a:focus > .qty,
+        .header-ctn > .dropdown.open > a > .qty {
+            transform: scale(1.15);
+        }
+
+@media (prefers-reduced-motion: reduce) {
+    .header-ctn > div > a,
+    .header-ctn > div > a > i,
+    .header-ctn > div > a > .qty {
+        transition: none;
+    }
+
+        .header-ctn > div > a:hover > i,
+        .header-ctn > div > a:hover > .qty {
+            transform: none;
+        }
+}

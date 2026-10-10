@@ -1,5 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    // Idioma actual (lo define Global.asax a partir de la cookie "idioma").
+    var idiomaActual = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "en" ? "en" : "es";
+}
+<!DOCTYPE html>
+<html lang="@idiomaActual">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,24 +45,58 @@
 </head>
 <body>
 
+    @if (ViewBag.OcultarHeader == true)
+    {
+    <!-- Solo flecha para volver al inicio -->
+    <div class="volver-inicio">
+        <a href="@Url.Action("Index", "Home")" aria-label="@Textos.Layout_VolverInicio">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+    </div>
+    }
+    else
+    {
+    <text>
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
         <div id="top-header">
-            <div class="container">
+            <div class="container-fluid">
                 <ul class="header-links pull-left">
                     <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
                     <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
                 </ul>
                 <ul class="header-links pull-right">
-                    <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                    <li><a href="@Url.Action("Login", "Cuenta")"><i class="fa fa-user-o"></i> Mi Cuenta</a></li>
+                    <li class="dropdown selector-header selector-moneda">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="@Textos.Layout_CambiarMoneda">
+                            <span class="moneda-actual"><i class="fa fa-dollar"></i> USD</span>
+                            <i class="fa fa-caret-down selector-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#" data-moneda="USD"><i class="fa fa-dollar"></i> USD - @Textos.Layout_Moneda_USD</a></li>
+                            <li><a href="#" data-moneda="CRC"><i class="fa simbolo-colon">₡</i> CRC - @Textos.Layout_Moneda_CRC</a></li>
+                            <li><a href="#" data-moneda="EUR"><i class="fa fa-eur"></i> EUR - @Textos.Layout_Moneda_EUR</a></li>
+                            <li><a href="#" data-moneda="MXN"><i class="fa fa-dollar"></i> MXN - @Textos.Layout_Moneda_MXN</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("Login", "Cuenta")"><i class="fa fa-user-o"></i> @Textos.Comun_MiCuenta</a></li>
                     <li>
                         <a href="@Url.Action("Index", "Admin")">
                             <i class="fa fa-dashboard" aria-hidden="true"></i>
                             Admin
                         </a>
+                    </li>
+                    <li class="dropdown selector-header selector-idioma">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="@Textos.Layout_CambiarIdioma">
+                            <i class="fa fa-globe"></i>
+                            <span class="idioma-actual">@idiomaActual.ToUpper()</span>
+                            <i class="fa fa-caret-down selector-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="@Url.Action("Cambiar", "Idioma", new { codigo = "es", returnUrl = Request.RawUrl })" lang="es">Español</a></li>
+                            <li><a href="@Url.Action("Cambiar", "Idioma", new { codigo = "en", returnUrl = Request.RawUrl })" lang="en">English</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -73,7 +111,7 @@
                     <!-- LOGO -->
                     <div class="col-md-3">
                         <div class="header-logo">
-                            <a href="#" class="logo">
+                            <a href="@Url.Action("Index", "Home")" class="logo" aria-label="@Textos.Layout_IrAlInicio">
                                 <img src="@Url.Content("~/Content/img/logo.png")" alt="">
                             </a>
                         </div>
@@ -84,12 +122,12 @@
                         <div class="header-search">
                             <form>
                                 <select class="input-select">
-                                    <option value="0">Todas las categorías</option>
-                                    <option value="1">Category 01</option>
-                                    <option value="1">Category 02</option>
+                                    <option value="0">@Textos.Comun_TodasCategorias</option>
+                                    <option value="1">@Textos.Layout_Categoria01</option>
+                                    <option value="1">@Textos.Layout_Categoria02</option>
                                 </select>
-                                <input class="input" placeholder="Buscar producto...">
-                                <button class="search-btn">Buscar</button>
+                                <input class="input" placeholder="@Textos.Layout_BuscarProducto">
+                                <button class="search-btn">@Textos.Layout_Buscar</button>
                             </form>
                         </div>
                     </div>
@@ -101,7 +139,7 @@
                             <div>
                                 <a href="#">
                                     <i class="fa fa-heart-o"></i>
-                                    <span>Favoritos</span>
+                                    <span>@Textos.Comun_Favoritos</span>
                                     <div class="qty">2</div>
                                 </a>
                             </div>
@@ -110,7 +148,7 @@
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <i class="fa fa-shopping-cart"></i>
-                                    <span>Carrito</span>
+                                    <span>@Textos.Comun_Carrito</span>
                                     <div class="qty">3</div>
                                 </a>
                                 <div class="cart-dropdown">
@@ -120,7 +158,7 @@
                                                 <img src="@Url.Content("~/Content/img/product01.png")" alt="">
                                             </div>
                                             <div class="product-body">
-                                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                                <h3 class="product-name"><a href="#">@Textos.Comun_NombreProducto</a></h3>
                                                 <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
                                             </div>
                                             <button class="delete"><i class="fa fa-close"></i></button>
@@ -131,19 +169,19 @@
                                                 <img src="@Url.Content("~/Content/img/product02.png")" alt="">
                                             </div>
                                             <div class="product-body">
-                                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                                <h3 class="product-name"><a href="#">@Textos.Comun_NombreProducto</a></h3>
                                                 <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
                                             </div>
                                             <button class="delete"><i class="fa fa-close"></i></button>
                                         </div>
                                     </div>
                                     <div class="cart-summary">
-                                        <small>3 Item(s) selected</small>
-                                        <h5>SUBTOTAL: $2940.00</h5>
+                                        <small>@string.Format(Textos.Layout_ArticulosSeleccionados, 3)</small>
+                                        <h5>@Textos.Layout_Subtotal: $2940.00</h5>
                                     </div>
                                     <div class="cart-btns">
-                                        <a href="#">View Cart</a>
-                                        <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a href="#">@Textos.Comun_VerCarrito</a>
+                                        <a href="#">@Textos.Comun_Pagar  <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +190,7 @@
                             <div class="menu-toggle">
                                 <a href="#">
                                     <i class="fa fa-bars"></i>
-                                    <span>Menu</span>
+                                    <span>@Textos.Layout_Menu</span>
                                 </a>
                             </div>
                             <!-- /Menu Toogle -->
@@ -175,13 +213,13 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Categorías</a></li>
-                    <li><a href="#">Maquillaje</a></li>
-                    <li><a href="#">Smartphones</a></li>
-                    <li><a href="#">Cuidado facial</a></li>
-                    <li><a href="#">Accesorios</a></li>
+                    <li class="active"><a href="#">@Textos.Comun_Inicio</a></li>
+                    <li><a href="#">@Textos.Comun_Ofertas</a></li>
+                    <li><a href="#">@Textos.Comun_Categorias</a></li>
+                    <li><a href="#">@Textos.Comun_Maquillaje</a></li>
+                    <li><a href="#">@Textos.Comun_Smartphones</a></li>
+                    <li><a href="#">@Textos.Comun_CuidadoFacial</a></li>
+                    <li><a href="#">@Textos.Comun_Accesorios</a></li>
                 </ul>
                 <!-- /NAV -->
             </div>
@@ -190,6 +228,8 @@
         <!-- /container -->
     </nav>
     <!-- /NAVIGATION -->
+    </text>
+    }
 
     @RenderBody()
 
@@ -204,8 +244,8 @@
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">About Us</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                            <h3 class="footer-title">@Textos.Layout_SobreNosotros</h3>
+                            <p>@Textos.Layout_SobreNosotrosTexto</p>
                             <ul class="footer-links">
                                 <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
                                 <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
@@ -216,13 +256,13 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Categories</h3>
+                            <h3 class="footer-title">@Textos.Comun_Categorias</h3>
                             <ul class="footer-links">
-                                <li><a href="#">Hot deals</a></li>
-                                <li><a href="#">Laptops</a></li>
-                                <li><a href="#">Smartphones</a></li>
-                                <li><a href="#">Cameras</a></li>
-                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">@Textos.Comun_Ofertas</a></li>
+                                <li><a href="#">@Textos.Comun_Laptops</a></li>
+                                <li><a href="#">@Textos.Comun_Smartphones</a></li>
+                                <li><a href="#">@Textos.Comun_Camaras</a></li>
+                                <li><a href="#">@Textos.Comun_Accesorios</a></li>
                             </ul>
                         </div>
                     </div>
@@ -231,26 +271,26 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Information</h3>
+                            <h3 class="footer-title">@Textos.Layout_Informacion</h3>
                             <ul class="footer-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">@Textos.Layout_SobreNosotros</a></li>
+                                <li><a href="#">@Textos.Layout_Contactenos</a></li>
+                                <li><a href="#">@Textos.Layout_PoliticaPrivacidad</a></li>
+                                <li><a href="#">@Textos.Layout_PedidosDevoluciones</a></li>
+                                <li><a href="#">@Textos.Layout_TerminosCondiciones</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Service</h3>
+                            <h3 class="footer-title">@Textos.Layout_Servicio</h3>
                             <ul class="footer-links">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">View Cart</a></li>
-                                <li><a href="#">Wishlist</a></li>
-                                <li><a href="#">Track My Order</a></li>
-                                <li><a href="#">Help</a></li>
+                                <li><a href="#">@Textos.Comun_MiCuenta</a></li>
+                                <li><a href="#">@Textos.Comun_VerCarrito</a></li>
+                                <li><a href="#">@Textos.Comun_Favoritos</a></li>
+                                <li><a href="#">@Textos.Layout_RastrearPedido</a></li>
+                                <li><a href="#">@Textos.Layout_Ayuda</a></li>
                             </ul>
                         </div>
                     </div>
@@ -293,6 +333,53 @@
     <script src="@Url.Content("~/Content/js/nouislider.min.js")"></script>
     <script src="@Url.Content("~/Content/js/jquery.zoom.min.js")"></script>
     <script src="@Url.Content("~/Content/js/main.js")"></script>
+
+    <script>
+        // Selector de moneda: cambia la etiqueta, recuerda la elección y convierte
+        // los precios marcados con data-precio-crc (precio base en colones).
+        (function ($) {
+            var $actual = $(".selector-moneda .moneda-actual");
+
+            // Tipos de cambio fijos y aproximados para el prototipo: colones por unidad.
+            var monedas = {
+                CRC: { colones: 1, formato: "es-CR" },
+                USD: { colones: 505, formato: "en-US" },
+                EUR: { colones: 590, formato: "es-ES" },
+                MXN: { colones: 28, formato: "en-US" }
+            };
+
+            function actualizarPrecios(codigo) {
+                var moneda = monedas[codigo];
+                var formateador = new Intl.NumberFormat(moneda.formato, {
+                    style: "currency",
+                    currency: codigo
+                });
+
+                $("[data-precio-crc]").each(function () {
+                    var precioCrc = parseFloat($(this).data("precio-crc"));
+                    $(this).text(formateador.format(precioCrc / moneda.colones));
+                });
+            }
+
+            function aplicarMoneda(codigo) {
+                var $opcion = $(".selector-moneda [data-moneda='" + codigo + "']");
+                if (!$opcion.length || !monedas[codigo]) return;
+                $actual.html($opcion.find("i").prop("outerHTML") + " " + codigo);
+                actualizarPrecios(codigo);
+            }
+
+            var monedaGuardada = null;
+            try { monedaGuardada = localStorage.getItem("moneda"); } catch (e) { }
+            aplicarMoneda(monedas[monedaGuardada] ? monedaGuardada : "USD");
+
+            $(".selector-moneda [data-moneda]").on("click", function (event) {
+                event.preventDefault();
+                var codigo = $(this).data("moneda");
+                aplicarMoneda(codigo);
+                try { localStorage.setItem("moneda", codigo); } catch (e) { }
+            });
+        })(jQuery);
+    </script>
 
     @RenderSection("scripts", required: false)
 </body>

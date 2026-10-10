@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Iniciar Sesión";
+    ViewBag.Title = Textos.Comun_IniciarSesion;
+    ViewBag.OcultarHeader = true;
 }
 
 <div class="section auth-section">
@@ -8,19 +9,19 @@
             <div class="col-md-5 col-md-offset-3">
                 <div class="auth-card">
                     <div class="auth-header text-center">
-                        <h2>Iniciar Sesión</h2>
-                        <p>Ingrese a su cuenta para continuar comprando en Ágata MakeUp.</p>
+                        <h2>@Textos.Comun_IniciarSesion</h2>
+                        <p>@Textos.Cuenta_LoginTexto</p>
                     </div>
 
                     <form>
                         <div class="form-group">
-                            <label>Correo electrónico</label>
-                            <input class="input" type="email" placeholder="ejemplo@correo.com">
+                            <label>@Textos.Comun_CorreoElectronico</label>
+                            <input class="input" type="email" placeholder="@Textos.Comun_CorreoEjemplo">
                         </div>
 
                         <div class="form-group">
-                            <label>Contraseña</label>
-                            <input class="input" type="password" placeholder="Ingrese su contraseña">
+                            <label>@Textos.Comun_Contrasena</label>
+                            <input class="input" type="password" placeholder="@Textos.Comun_IngreseContrasena">
                         </div>
 
                         <div class="form-group">
@@ -28,18 +29,18 @@
                                 <input type="checkbox" id="recordarme">
                                 <label for="recordarme">
                                     <span></span>
-                                    Recordarme
+                                    @Textos.Cuenta_Recordarme
                                 </label>
                             </div>
                         </div>
 
-                        <button type="button" class="primary-btn auth-btn">Ingresar</button>
+                        <button type="button" class="primary-btn auth-btn">@Textos.Cuenta_Ingresar</button>
 
                         <div class="auth-links text-center">
-                            <a href="@Url.Action("Recuperar", "Cuenta")">¿Olvidó su contraseña?</a>
+                            <a href="@Url.Action("Recuperar", "Cuenta")">@Textos.Cuenta_OlvidoContrasena</a>
                             <br>
-                            <span>¿No tiene cuenta?</span>
-                            <a href="@Url.Action("Registro", "Cuenta")">Crear cuenta</a>
+                            <span>@Textos.Cuenta_NoTieneCuenta</span>
+                            <a href="@Url.Action("Registro", "Cuenta")">@Textos.Cuenta_CrearCuenta</a>
                         </div>
                     </form>
                 </div>

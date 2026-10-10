@@ -19,6 +19,9 @@ using System.Runtime.InteropServices;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
+// Los textos de Recursos\Textos.resx (sin sufijo de idioma) están en español.
+[assembly: System.Resources.NeutralResourcesLanguage("es")]
+
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("68cd3f1c-0c9e-4b62-8c0e-a17064cd9c5d")]
 
