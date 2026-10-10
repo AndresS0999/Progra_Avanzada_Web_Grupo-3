@@ -1,0 +1,222 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Datos quemados para el prototipo.
+    var categorias = new[]
+    {
+        new {
+            Nombre = "Maquillaje",
+            Descripcion = "Resaltá tu estilo",
+            Imagen = "shop01.png"
+        },
+        new {
+            Nombre = "Cuidado facial",
+            Descripcion = "Un momento para vos",
+            Imagen = "shop02.png"
+        },
+        new {
+            Nombre = "Accesorios",
+            Descripcion = "Complementá tu rutina",
+            Imagen = "shop03.png"
+        }
+    };
+
+    var productos = new[]
+    {
+        new {
+            Nombre = "Labial mate",
+            Categoria = "Labios",
+            Precio = "₡4 500,00",
+            Imagen = "product01.png"
+        },
+        new {
+            Nombre = "Paleta de sombras",
+            Categoria = "Ojos",
+            Precio = "₡12 500,00",
+            Imagen = "product02.png"
+        },
+        new {
+            Nombre = "Base de maquillaje",
+            Categoria = "Rostro",
+            Precio = "₡8 900,00",
+            Imagen = "product03.png"
+        },
+        new {
+            Nombre = "Set de brochas",
+            Categoria = "Accesorios",
+            Precio = "₡9 500,00",
+            Imagen = "product04.png"
+        }
+    };
+}
+
+<div class="agata-inicio">
+
+    <!-- Bienvenida -->
+    <section class="agata-hero">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-7">
+                    <div class="agata-hero-contenido">
+                        <span class="agata-hero-etiqueta">
+                            ÁGATA MAKEUP
+                        </span>
+
+                        <h1>
+                            Belleza para
+                            <span>cada versión de ti.</span>
+                        </h1>
+
+                        <p>
+                            Descubrí maquillaje, cuidado facial y accesorios
+                            seleccionados para complementar tu estilo.
+                        </p>
+
+                        <a href="@Url.Action("Index", "Productos")"
+                           class="home-boton">
+                            Explorar productos
+                            <i class="fa fa-arrow-right"
+                               aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-5 hidden-sm hidden-xs">
+                    <div class="agata-hero-decoracion"
+                         aria-hidden="true">
+                        <div class="agata-circulo circulo-1"></div>
+                        <div class="agata-circulo circulo-2"></div>
+                        <div class="agata-hero-letra">A</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="home-seccion">
+        <div class="container">
+
+            <div class="home-titulo">
+                <div>
+                    <span class="home-subtitulo">ENCONTRÁ TU ESTILO</span>
+                    <h2>Explorá nuestras categorías</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                @foreach (var categoria in categorias)
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <a href="@Url.Action("Index", "Productos")"
+                           class="categoria-home">
+
+                            <div class="categoria-home-imagen">
+                                <img src="@Url.Content("~/Content/img/" + categoria.Imagen)"
+                                     alt="@categoria.Nombre" />
+                            </div>
+
+                            <div class="categoria-home-overlay">
+                                <div>
+                                    <span>@categoria.Descripcion</span>
+                                    <h3>@categoria.Nombre</h3>
+                                    <strong>
+                                        Explorar catálogo →
+                                    </strong>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="home-seccion home-section-suave">
+        <div class="container">
+
+            <div class="home-titulo">
+                <div>
+                    <span class="home-subtitulo">
+                        UNA SELECCIÓN PARA VOS
+                    </span>
+                    <h2>Productos destacados</h2>
+                </div>
+
+                <a href="@Url.Action("Index", "Productos")"
+                   class="home-ver-todos">
+                    Ver catálogo →
+                </a>
+            </div>
+
+            <div class="row home-productos-grid">
+                @foreach (var producto in productos)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <article class="home-producto">
+
+                            <div class="home-producto-imagen">
+                                <img src="@Url.Content("~/Content/img/" + producto.Imagen)"
+                                     alt="@producto.Nombre"
+                                     loading="lazy" />
+                            </div>
+
+                            <div class="home-producto-info">
+                                <p>@producto.Categoria</p>
+                                <h3>@producto.Nombre</h3>
+
+                                <strong class="home-producto-precio">
+                                    @producto.Precio
+                                </strong>
+
+                                <span class="home-disponible">
+                                    Disponible
+                                </span>
+                            </div>
+
+                            <div class="home-producto-accion">
+                                <a href="@Url.Action("Index", "Productos")"
+                                   class="home-btn-producto">
+                                    Ver en el catálogo
+                                    <i class="fa fa-arrow-right"
+                                       aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cierre -->
+    <section class="home-cierre">
+        <div class="container">
+            <div class="home-cierre-contenido">
+                <span>ÁGATA MAKEUP</span>
+
+                <h2>Tu estilo, tu esencia.</h2>
+
+                <p>
+                    Encontrá esos pequeños detalles que hacen
+                    especial tu rutina de belleza.
+                </p>
+
+                <a href="@Url.Action("Index", "Productos")"
+                   class="home-boton">
+                    Ver todos los productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+

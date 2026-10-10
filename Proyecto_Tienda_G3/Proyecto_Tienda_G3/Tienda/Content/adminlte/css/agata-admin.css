@@ -1,0 +1,499 @@
+﻿:root {
+    --agata-primary: #d184a6;
+    --agata-primary-dark: #a65d7d;
+    --agata-primary-deep: #7e3f5b;
+    --agata-soft: #f9e9f0;
+    --agata-soft-light: #fff8fb;
+    --agata-beige: #c8b79c;
+    --agata-beige-light: #eee5d8;
+    --agata-text: #292735;
+    --agata-muted: #766f78;
+    --agata-border: #ead9e1;
+    --agata-white: #ffffff;
+}
+
+/* Estructura general */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--agata-soft-light);
+    color: var(--agata-text);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.app-wrapper {
+    background-color: var(--agata-soft-light);
+}
+
+.app-main {
+    background-color: var(--agata-soft-light);
+}
+
+.app-content-header {
+    padding-top: 22px;
+    padding-bottom: 12px;
+}
+
+    .app-content-header h3 {
+        color: var(--agata-text);
+        font-weight: 700;
+    }
+
+.breadcrumb-item a {
+    color: var(--agata-primary-dark);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: var(--agata-muted);
+}
+
+/* Encabezado superior */
+
+.agata-header {
+    background-color: var(--agata-white);
+    border-bottom: 1px solid var(--agata-border);
+    box-shadow: 0 2px 8px rgba(89, 54, 70, 0.06);
+}
+
+    .agata-header .nav-link {
+        color: var(--agata-text);
+    }
+
+        .agata-header .nav-link:hover {
+            color: var(--agata-primary-dark);
+        }
+
+/* Barra lateral */
+
+.agata-sidebar {
+    background: linear-gradient( 180deg, var(--agata-primary-dark) 0%, var(--agata-primary-deep) 100% );
+}
+
+.sidebar-brand {
+    min-height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.brand-link {
+    color: var(--agata-white);
+    text-decoration: none;
+}
+
+    .brand-link:hover,
+    .brand-link:focus {
+        color: var(--agata-white);
+    }
+
+.brand-content {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-symbol {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    color: var(--agata-white);
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.brand-text {
+    color: var(--agata-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar-wrapper {
+    padding-top: 12px;
+}
+
+.sidebar-menu .nav-header {
+    margin-top: 13px;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.sidebar-menu .nav-link {
+    margin: 3px 9px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.87);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+    .sidebar-menu .nav-link:hover {
+        color: var(--agata-white);
+        background-color: rgba(255, 255, 255, 0.12);
+        transform: translateX(2px);
+    }
+
+    .sidebar-menu .nav-link.active {
+        color: var(--agata-primary-deep);
+        background-color: var(--agata-white);
+        box-shadow: 0 4px 12px rgba(49, 19, 33, 0.17);
+    }
+
+.sidebar-menu .nav-icon {
+    display: inline-flex;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tarjetas superiores */
+
+.small-box {
+    min-height: 132px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(82, 49, 63, 0.09);
+}
+
+    .small-box .inner {
+        padding: 20px;
+    }
+
+        .small-box .inner h3 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .small-box .inner p {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+.small-box-icon {
+    opacity: 0.18;
+}
+
+.small-box-footer {
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+/* Sobrescribe los colores predeterminados de Bootstrap */
+
+.small-box.text-bg-primary {
+    color: var(--agata-white) !important;
+    background-color: var(--agata-primary) !important;
+    border-color: var(--agata-primary);
+}
+
+.small-box.text-bg-success {
+    color: var(--agata-white) !important;
+    background-color: var(--agata-primary-dark) !important;
+    border-color: var(--agata-primary-dark);
+}
+
+.small-box.text-bg-warning {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-beige-light) !important;
+    border-color: var(--agata-beige);
+}
+
+.small-box.text-bg-info {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-soft) !important;
+    border-color: var(--agata-border);
+}
+
+.small-box.text-bg-primary .small-box-footer,
+.small-box.text-bg-success .small-box-footer {
+    color: var(--agata-white) !important;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.small-box.text-bg-warning .small-box-footer,
+.small-box.text-bg-info .small-box-footer {
+    color: var(--agata-text) !important;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+/* Tarjetas de contenido */
+
+.card {
+    overflow: hidden;
+    border: 1px solid var(--agata-border);
+    border-radius: 12px;
+    background-color: var(--agata-white);
+    box-shadow: 0 4px 16px rgba(82, 49, 63, 0.07);
+}
+
+.card-header {
+    border-bottom: 1px solid var(--agata-border);
+    background-color: var(--agata-white);
+}
+
+.card-title {
+    color: var(--agata-text);
+    font-weight: 650;
+}
+
+.card-outline.card-primary {
+    border-top: 3px solid var(--agata-primary);
+}
+
+.card-outline.card-info {
+    border-top: 3px solid var(--agata-beige);
+}
+
+.card-outline.card-success {
+    border-top: 3px solid var(--agata-primary-dark);
+}
+
+/* Componentes */
+
+.text-agata {
+    color: var(--agata-primary-dark) !important;
+}
+
+.btn-agata {
+    color: var(--agata-white);
+    background-color: var(--agata-primary);
+    border-color: var(--agata-primary);
+}
+
+    .btn-agata:hover,
+    .btn-agata:focus {
+        color: var(--agata-white);
+        background-color: var(--agata-primary-dark);
+        border-color: var(--agata-primary-dark);
+    }
+
+.progress-bar {
+    background-color: var(--agata-primary);
+}
+
+.badge.text-bg-primary {
+    background-color: var(--agata-primary) !important;
+}
+
+.badge.text-bg-success {
+    background-color: var(--agata-primary-dark) !important;
+}
+
+.badge.text-bg-info {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-soft) !important;
+}
+
+.badge.text-bg-warning {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-beige-light) !important;
+}
+
+/* Tablas */
+
+.table {
+    --bs-table-bg: var(--agata-white);
+    --bs-table-color: var(--agata-text);
+    --bs-table-border-color: var(--agata-border);
+    --bs-table-hover-bg: var(--agata-soft-light);
+}
+
+    .table thead th {
+        color: var(--agata-primary-deep);
+        background-color: var(--agata-soft);
+        font-weight: 700;
+    }
+
+/* Formularios administrativos futuros */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--agata-primary);
+    box-shadow: 0 0 0 0.2rem rgba(209, 132, 166, 0.2);
+}
+
+/* Pie */
+
+.app-footer {
+    border-top: 1px solid var(--agata-border);
+    color: var(--agata-muted);
+    background-color: var(--agata-white);
+}
+
+/* Adaptación móvil */
+
+@media (max-width: 767.98px) {
+    .small-box {
+        min-height: 120px;
+    }
+
+        .small-box .inner h3 {
+            font-size: 28px;
+        }
+
+    .app-content-header {
+        padding-top: 15px;
+    }
+}
+/* =========================================================
+   Formularios administrativos en modo claro
+   ========================================================= */
+
+html[data-bs-theme="light"] {
+    color-scheme: light;
+    --bs-body-color: #292735;
+    --bs-body-bg: #fff8fb;
+    --bs-secondary-color: #766f78;
+    --bs-border-color: #ead9e1;
+}
+
+/* Tarjetas */
+
+.app-main .card {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-white) !important;
+}
+
+.app-main .card-header,
+.app-main .card-body {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-white) !important;
+}
+
+    /* Evita que el título y la descripción se monten */
+
+    .app-main .card-header .card-title {
+        float: none !important;
+        display: block;
+        margin: 0 0 4px 0 !important;
+        color: var(--agata-text) !important;
+    }
+
+    .app-main .card-header p {
+        clear: both;
+        display: block;
+        margin-left: 0;
+        color: var(--agata-muted) !important;
+    }
+
+/* Etiquetas */
+
+.app-main .form-label,
+.app-main .form-check-label {
+    color: var(--agata-text) !important;
+    font-weight: 600;
+}
+
+/* Campos */
+
+.app-main .form-control,
+.app-main .form-select {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-white) !important;
+    border-color: var(--agata-border) !important;
+}
+
+.app-main textarea.form-control {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-white) !important;
+}
+
+.app-main .form-control:focus,
+.app-main .form-select:focus {
+    color: var(--agata-text) !important;
+    background-color: var(--agata-white) !important;
+    border-color: var(--agata-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(209, 132, 166, 0.20) !important;
+}
+
+.app-main .form-control::placeholder {
+    color: #a79da2 !important;
+    opacity: 1;
+}
+
+.app-main .form-select option {
+    color: var(--agata-text);
+    background-color: var(--agata-white);
+}
+
+/* Símbolo de colones */
+
+.app-main .input-group-text {
+    color: var(--agata-primary-deep) !important;
+    background-color: var(--agata-soft) !important;
+    border-color: var(--agata-border) !important;
+    font-weight: 700;
+}
+
+/* Textos de ayuda */
+
+.app-main .form-text,
+.app-main .text-muted {
+    color: var(--agata-muted) !important;
+}
+
+/* Interruptores */
+
+.app-main .form-check-input {
+    border-color: var(--agata-border);
+}
+
+    .app-main .form-check-input:checked {
+        background-color: var(--agata-primary) !important;
+        border-color: var(--agata-primary) !important;
+    }
+
+    .app-main .form-check-input:focus {
+        border-color: var(--agata-primary);
+        box-shadow: 0 0 0 0.2rem rgba(209, 132, 166, 0.20);
+    }
+
+/* Texto e íconos del menú lateral */
+.agata-sidebar .brand-link,
+.agata-sidebar .brand-text,
+.agata-sidebar .brand-symbol,
+.agata-sidebar .sidebar-menu .nav-header,
+.agata-sidebar .sidebar-menu .nav-link,
+.agata-sidebar .sidebar-menu .nav-link p,
+.agata-sidebar .sidebar-menu .nav-icon {
+    color: #fff !important;
+}
+
+    /* Opción seleccionada */
+    .agata-sidebar .sidebar-menu .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.18) !important;
+    }
+
+    /* Al pasar el cursor */
+    .agata-sidebar .sidebar-menu .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+    }
+
+    .agata-sidebar .brand-link,
+    .agata-sidebar .brand-text,
+    .agata-sidebar .brand-symbol,
+    .agata-sidebar .sidebar-menu .nav-header,
+    .agata-sidebar .sidebar-menu .nav-link,
+    .agata-sidebar .sidebar-menu .nav-link p,
+    .agata-sidebar .sidebar-menu .nav-icon {
+        color: #fff !important;
+    }
+
+        .agata-sidebar .sidebar-menu .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.18) !important;
+        }
+
+        .agata-sidebar .sidebar-menu .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.12) !important;
+        }
