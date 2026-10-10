@@ -531,3 +531,20 @@
             transform: none;
         }
 }
+
+/* Logo pegado al borde izquierdo y buscador alineado con el menú ("Inicio").
+   Solo en pantallas anchas: por debajo de 1460px el logo se encimaría con
+   el buscador, así que se mantiene el diseño normal. */
+@media (min-width: 1460px) {
+    #header .row {
+        min-height: 110px; /* alto del logo, que ya no ocupa espacio en la fila */
+    }
+
+        #header .row > .col-md-3:first-child {
+            position: absolute;
+            top: 15px;
+            left: 30px;
+            width: auto;
+            padding: 0;
+        }
+}
