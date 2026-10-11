@@ -1,0 +1,199 @@
+﻿@{
+    ViewBag.Title = Textos.Checkout_Titulo;
+}
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="breadcrumb-header">@Textos.Checkout_Titulo</h3>
+                <ul class="breadcrumb-tree">
+                    <li><a asp-action="Index" asp-controller="Home">@Textos.Comun_Inicio</a></li>
+                    <li class="active">@Textos.Checkout_Titulo</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /BREADCRUMB -->
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <!-- Billing Details -->
+                <div class="billing-details">
+                    <div class="section-title">
+                        <h3 class="title">@Textos.Checkout_DireccionFacturacion</h3>
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="first-name" placeholder="@Textos.Checkout_Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="last-name" placeholder="@Textos.Checkout_Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="email" name="email" placeholder="@Textos.Comun_CorreoElectronico">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="address" placeholder="@Textos.Comun_Direccion">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="city" placeholder="@Textos.Checkout_Ciudad">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="country" placeholder="@Textos.Checkout_Pais">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="zip-code" placeholder="@Textos.Checkout_CodigoPostal">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="tel" name="tel" placeholder="@Textos.Comun_Telefono">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="create-account">
+                            <label for="create-account">
+                                <span></span>
+                                @Textos.Checkout_CrearCuenta
+                            </label>
+                            <div class="caption">
+                                <p>@Textos.Checkout_CrearCuentaTexto</p>
+                                <input class="input" type="password" name="password" placeholder="@Textos.Comun_IngreseContrasena">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Billing Details -->
+                <!-- Shiping Details -->
+                <div class="shiping-details">
+                    <div class="section-title">
+                        <h3 class="title">@Textos.Checkout_DireccionEnvio</h3>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="shiping-address">
+                        <label for="shiping-address">
+                            <span></span>
+                            @Textos.Checkout_EnviarOtraDireccion
+                        </label>
+                        <div class="caption">
+                            <div class="form-group">
+                                <input class="input" type="text" name="first-name" placeholder="@Textos.Checkout_Nombre">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="last-name" placeholder="@Textos.Checkout_Apellidos">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="email" name="email" placeholder="@Textos.Comun_CorreoElectronico">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="address" placeholder="@Textos.Comun_Direccion">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="city" placeholder="@Textos.Checkout_Ciudad">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="country" placeholder="@Textos.Checkout_Pais">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="zip-code" placeholder="@Textos.Checkout_CodigoPostal">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="tel" name="tel" placeholder="@Textos.Comun_Telefono">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Shiping Details -->
+                <!-- Order notes -->
+                <div class="order-notes">
+                    <textarea class="input" placeholder="@Textos.Checkout_NotasPedido"></textarea>
+                </div>
+                <!-- /Order notes -->
+            </div>
+
+            <!-- Order Details -->
+            <div class="col-md-5 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">@Textos.Checkout_SuPedido</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong>@Textos.Checkout_Producto</strong></div>
+                        <div><strong>@Textos.Comun_Total</strong></div>
+                    </div>
+                    <div class="order-products">
+                        <div class="order-col">
+                            <div>1x @Textos.Comun_NombreProducto</div>
+                            <div>$980.00</div>
+                        </div>
+                        <div class="order-col">
+                            <div>2x @Textos.Comun_NombreProducto</div>
+                            <div>$980.00</div>
+                        </div>
+                    </div>
+                    <div class="order-col">
+                        <div>@Textos.Checkout_Envio</div>
+                        <div><strong>@Textos.Checkout_Gratis</strong></div>
+                    </div>
+                    <div class="order-col">
+                        <div><strong>@Textos.Comun_Total</strong></div>
+                        <div><strong class="order-total">$2940.00</strong></div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-1">
+                        <label for="payment-1">
+                            <span></span>
+                            @Textos.Checkout_Transferencia
+                        </label>
+                        <div class="caption">
+                            <p>@Textos.Checkout_TransferenciaTexto</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-2">
+                        <label for="payment-2">
+                            <span></span>
+                            @Textos.Checkout_Cheque
+                        </label>
+                        <div class="caption">
+                            <p>@Textos.Checkout_ChequeTexto</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-3">
+                        <label for="payment-3">
+                            <span></span>
+                            @Textos.Checkout_Paypal
+                        </label>
+                        <div class="caption">
+                            <p>@Textos.Checkout_PaypalTexto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-checkbox">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        <span></span>
+                        @Textos.Checkout_AceptoTerminos <a href="#">@Textos.Checkout_TerminosCondiciones</a>
+                    </label>
+                </div>
+                <a href="#" class="primary-btn order-submit">@Textos.Checkout_RealizarPedido</a>
+            </div>
+            <!-- /Order Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->

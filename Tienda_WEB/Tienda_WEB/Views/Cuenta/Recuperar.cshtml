@@ -1,0 +1,42 @@
+﻿@model ForgotRequestModel
+
+@{
+    ViewBag.Title = Textos.Cuenta_RecuperarTitulo;
+}
+
+<div class="section auth-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-3">
+                <div class="auth-card">
+                    <div class="auth-header text-center">
+                        <h2>@Textos.Cuenta_RecuperarTitulo</h2>
+                        <p>@Textos.Cuenta_RecuperarTexto</p>
+                    </div>
+
+                    <form asp-action="Recuperar" asp-controller="Cuenta" method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            <label for="CorreoElectronico">@Textos.Comun_CorreoElectronico</label>
+                            <input class="input" type="email" asp-for="CorreoElectronico" placeholder="@Textos.Comun_CorreoEjemplo">
+                        </div>
+
+                        <button type="submit" class="primary-btn auth-btn">@Textos.Cuenta_EnviarSolicitud</button>
+
+                        <div class="auth-links text-center">
+                            <a asp-action="Login" asp-controller="Cuenta">@Textos.Cuenta_VolverLogin</a>
+                        </div>
+                    </form>
+
+                    <div class="auth-note">
+                        <p>
+                            @Textos.Cuenta_RecuperarNota
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
