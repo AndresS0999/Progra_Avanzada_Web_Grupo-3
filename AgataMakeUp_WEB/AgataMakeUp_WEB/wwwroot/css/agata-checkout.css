@@ -1,0 +1,110 @@
+/* Checkout: conserva la disposición en dos columnas de Electro. */
+.agata-checkout {
+    background: #fff;
+}
+
+    .agata-checkout .section-title .title {
+        color: #292735;
+        font-size: 19px;
+    }
+
+    .agata-checkout .form-group label {
+        display: block;
+        margin-bottom: 7px;
+        color: #292735;
+        font-weight: 600;
+    }
+
+    .agata-checkout .form-group {
+        margin-bottom: 16px;
+    }
+
+    .agata-checkout .input {
+        border-radius: 6px;
+    }
+
+        .agata-checkout .input:focus {
+            outline: 2px solid #e7adc4;
+            outline-offset: 1px;
+        }
+
+    .agata-checkout .order-notes .input {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+.agata-checkout-toggle {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 12px 0 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+    .agata-checkout-toggle input {
+        margin-top: 3px;
+        accent-color: #b5567b;
+    }
+
+.agata-checkout #agata-direccion-alternativa {
+    padding: 12px 14px 1px;
+    margin-bottom: 20px;
+    background: #fcf5f8;
+    border: 1px solid #f0dae4;
+    border-radius: 8px;
+}
+
+    .agata-checkout #agata-direccion-alternativa[hidden] {
+        display: none;
+    }
+
+.agata-checkout-resumen {
+    border: 1px solid #ead9e1;
+    border-radius: 10px;
+    padding: 20px 25px 25px;
+}
+
+    .agata-checkout-resumen::before {
+        display: none;
+    }
+
+.agata-checkout-pendiente {
+    padding: 18px 0;
+    color: #766f78;
+    line-height: 1.6;
+}
+
+.agata-checkout .payment-method {
+    margin: 24px 0;
+}
+
+    .agata-checkout .payment-method h4 {
+        font-size: 15px;
+    }
+
+    .agata-checkout .payment-method p {
+        color: #766f78;
+        line-height: 1.6;
+    }
+
+.agata-checkout .order-total {
+    font-size: 17px;
+}
+
+.agata-checkout .order-submit {
+    width: 100%;
+    cursor: pointer;
+}
+
+.agata-checkout-aviso {
+    margin-top: 13px;
+    color: #a64f72;
+    line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+    .agata-checkout-resumen {
+        margin-top: 25px;
+    }
+}

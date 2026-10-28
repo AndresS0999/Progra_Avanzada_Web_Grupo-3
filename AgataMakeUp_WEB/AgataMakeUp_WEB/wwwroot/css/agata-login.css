@@ -1,0 +1,107 @@
+/* Estilos exclusivos de la vista Cuenta/Login */
+.agata-login {
+    background: #fcfafb;
+    padding: 55px 0;
+}
+
+.agata-login-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 1px solid #efdce5;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(82,49,63,.07);
+}
+
+.agata-login-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+    .agata-login-header h1 {
+        font-size: 28px;
+        color: #292735;
+        margin-bottom: 12px;
+    }
+
+    .agata-login-header p {
+        color: #766f78;
+        line-height: 1.6;
+    }
+
+.agata-login-form .form-group {
+    margin-bottom: 20px;
+}
+
+    .agata-login-form .form-group > label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: 600;
+    }
+
+.agata-login-form .input {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.agata-login-boton {
+    display: block;
+    width: 100%;
+}
+
+    .agata-login-boton:disabled {
+        opacity: .65;
+        cursor: not-allowed;
+    }
+
+.agata-login-links {
+    margin-top: 22px;
+    text-align: center;
+    line-height: 1.9;
+}
+
+    .agata-login-links a {
+        color: #a65d7d;
+        font-weight: 700;
+    }
+
+    .agata-login-links p {
+        margin: 8px 0 0;
+    }
+
+@media (max-width: 576px) {
+    .agata-login {
+        padding: 30px 0;
+    }
+
+    .agata-login-card {
+        padding: 24px 18px;
+    }
+}
+
+.agata-login-password {
+    position: relative;
+}
+
+    .agata-login-password .input {
+        padding-right: 45px;
+    }
+
+.agata-password-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #766f78;
+    cursor: pointer;
+}
+
+    .agata-password-toggle:hover {
+        color: #292735;
+    }

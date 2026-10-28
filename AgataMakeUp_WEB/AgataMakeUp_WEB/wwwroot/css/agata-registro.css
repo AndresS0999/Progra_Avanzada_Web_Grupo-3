@@ -1,0 +1,68 @@
+/* Registro de clientes de Agata MakeUp: vista responsive de dos columnas. */
+.agata-registro {
+    background: #fcfafb;
+    padding: 40px 0;
+}
+
+    .agata-registro .registro-card {
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 34px 38px;
+        background: #fff;
+        border: 1px solid #f0e3e9;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(82,49,63,.06);
+    }
+
+    .agata-registro .registro-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 22px;
+        row-gap: 4px;
+        margin-top: 24px;
+    }
+
+        .agata-registro .registro-grid .form-group {
+            min-width: 0;
+            margin-bottom: 17px;
+        }
+
+        .agata-registro .registro-grid label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            color: #292735;
+        }
+
+        .agata-registro .registro-grid .input {
+            width: 100%;
+            border-radius: 7px;
+        }
+
+    .agata-registro .registro-btn {
+        width: 100%;
+        margin-top: 10px;
+        background: #f784b4;
+        cursor: pointer;
+    }
+
+    .agata-registro .registro-links {
+        margin-top: 20px;
+    }
+
+        .agata-registro .registro-links a {
+            color: #a65d7d;
+            font-weight: 700;
+        }
+
+@media (max-width: 650px) {
+    .agata-registro .registro-card {
+        padding: 26px 20px;
+    }
+
+    .agata-registro .registro-grid {
+        grid-template-columns: 1fr;
+        row-gap: 0;
+    }
+}

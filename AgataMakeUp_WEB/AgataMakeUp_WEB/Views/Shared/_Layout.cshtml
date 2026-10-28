@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewData["Title"] - Agata MakeUp</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="~/css/slick.css" asp-append-version="true" />
+    <link type="text/css" rel="stylesheet" href="~/css/slick-theme.css" asp-append-version="true" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="~/css/nouislider.min.css" asp-append-version="true" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="true" />
+
+    <!-- Estilos de la tienda -->
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="~/css/agata-home.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="~/css/agata-layout.css"
+          asp-append-version="true" />
+    <link rel="stylesheet"
+          href="~/css/agata-login.css"
+          asp-append-version="true" />
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container agata-topbar">
+                <div class="agata-contactos">
+                    <a href="tel:+50672608676"><i class="fa fa-whatsapp" aria-hidden="true"></i> +506 7260-8676</a>
+                    <a href="mailto:info@agatamakeups.cloud"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@agatamakeups.cloud</a>
+                    <span class="agata-contacto-pendiente"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</span>
+                </div>
+                <div class="agata-top-actions">
+                    <span><i class="fa fa-money" aria-hidden="true"></i> CRC</span>
+                    @if (Context.Session.GetString("NombreUsuario") != null)
+                    {
+                        <span><i class="fa fa-user-o" aria-hidden="true"></i> @Context.Session.GetString("NombreUsuario")</span>
+                        <a asp-controller="Cuenta" asp-action="CerrarSesion"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Cuenta" asp-action="Login"><i class="fa fa-user-o" aria-hidden="true"></i> Iniciar sesión</a>
+                    }
+                    @if (Context.Session.GetString("NombreRol") == "ADMIN")
+                    {
+                        <a asp-controller="Admin" asp-action="Index"><i class="fa fa-dashboard" aria-hidden="true"></i> Administración</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <div class="container">
+                <div class="row agata-header-row">
+                    <div class="col-md-2 agata-logo-col">
+                        <div class="header-logo">
+                            <a asp-controller="Home" asp-action="Index" class="logo">
+                                <img src="~/img/logo.png" asp-append-version="true" alt="Agata MakeUp" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 agata-search-col">
+                        <div class="header-search">
+                            <div class="search-form" role="search" aria-label="Búsqueda de productos">
+                                <select class="input-select" aria-label="Categoría">
+                                    <option value="">Todas las categorías</option>
+                                </select>
+                                <input class="input" placeholder="Buscar producto..." aria-label="Buscar producto" />
+                                <button class="search-btn" type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 agata-access-col">
+                        <div class="header-ctn">
+                            <div class="agata-access-item">
+                                <a asp-controller="Productos"
+                                   asp-action="Index"
+                                   class="agata-access-link"
+>
+                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span>Productos</span>
+                                </a>
+                            </div>
+                            <div class="agata-access-item">
+                                <span class="agata-access-link">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i><span>Favoritos</span>
+                                </span>
+                            </div>
+                            <div class="agata-access-item">
+                                <span class="agata-access-link">
+                                    <i class="fa fa-percent" aria-hidden="true"></i><span>Ofertas</span>
+                                </span>
+                            </div>
+                            <div class="agata-access-item">
+                                <span class="agata-access-link">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Carrito</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /HEADER -->
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <!-- container -->
+        <div class="container">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+                <!-- NAV -->
+                <ul class="main-nav nav navbar-nav">
+                    <li class="active"><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                </ul>
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
+    <main class="agata-contenido-principal">
+        @RenderBody()
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="footer">
+                            <h3 class="footer-title">Agata MakeUp</h3>
+                            <p>Maquillaje, belleza y accesorios.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="footer">
+                            <h3 class="footer-title">Información</h3>
+                            <p>Maquillaje, cuidado personal y accesorios para cada estilo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-footer" class="section">
+            <div class="container text-center">
+                <span class="copyright">&copy; @DateTime.Now.Year - Agata MakeUp</span>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    <!-- jQuery Plugins -->
+    <script src="~/js/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/slick.min.js" asp-append-version="true"></script>
+    <script src="~/js/nouislider.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.zoom.min.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

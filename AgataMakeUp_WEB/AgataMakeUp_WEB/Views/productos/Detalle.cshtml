@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Detalle del producto";
+}
+<link rel="stylesheet" href="~/css/agata-detalle.css" asp-append-version="true" />
+
+<div class="agata-detalle">
+    <div id="breadcrumb" class="section">
+        <div class="container">
+            <ul class="breadcrumb-tree">
+                <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                <li><a asp-controller="Productos" asp-action="Index">Productos</a></li>
+                <li class="active">Detalle del producto</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-5 col-md-push-2">
+                    <div id="product-main-img">
+                        <div class="product-preview"><img src="~/img/product01.png" alt="Vista principal del producto" /></div>
+                        <div class="product-preview"><img src="~/img/product02.png" alt="Vista adicional del producto" /></div>
+                        <div class="product-preview"><img src="~/img/product03.png" alt="Otra vista del producto" /></div>
+                        <div class="product-preview"><img src="~/img/product04.png" alt="Imagen adicional del producto" /></div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-pull-5">
+                    <div id="product-imgs">
+                        <div class="product-preview"><img src="~/img/product01.png" alt="Miniatura 1" /></div>
+                        <div class="product-preview"><img src="~/img/product02.png" alt="Miniatura 2" /></div>
+                        <div class="product-preview"><img src="~/img/product03.png" alt="Miniatura 3" /></div>
+                        <div class="product-preview"><img src="~/img/product04.png" alt="Miniatura 4" /></div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="product-details">
+                        <h2 class="product-name">Producto de maquillaje de ejemplo</h2>
+                        <div>
+                            <h3 class="product-price">Precio por definir</h3>
+                            <span class="product-available">Disponibilidad por confirmar</span>
+                        </div>
+                        <p>Conoce este producto de Agata MakeUp y explora sus opciones de presentación.</p>
+
+                        <div class="product-options">
+                            <label for="agata-variante">Presentación
+                                <select id="agata-variante" name="variante" class="input-select">
+                                    <option value="">Por definir</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="add-to-cart">
+                            <label class="qty-label" for="agata-cantidad">Cantidad
+                                <span class="input-number agata-cantidad-control">
+                                    <input id="agata-cantidad" name="cantidad" type="number" min="1" max="99" value="1" inputmode="numeric" />
+                                    <button type="button" class="qty-up" aria-label="Aumentar cantidad">+</button>
+                                    <button type="button" class="qty-down" aria-label="Disminuir cantidad">−</button>
+                                </span>
+                            </label>
+                            <button type="button" class="add-to-cart-btn" >
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Agregar al carrito
+                            </button>
+                        </div>
+                        <ul class="product-btns">
+                            <li><button type="button" class="agata-link-button" ><i class="fa fa-heart-o" aria-hidden="true"></i> Agregar a favoritos</button></li>
+                        </ul>
+                        <ul class="product-links">
+                            <li>Categoría:</li><li><a asp-controller="Productos" asp-action="Index">Maquillaje</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div id="product-tab">
+                        <ul class="tab-nav" role="tablist">
+                            <li class="active"><a href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1">Descripción</a></li>
+                            <li><a href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2">Detalles</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade in active" role="tabpanel">
+                                <p>Consulta la información general del producto y sus opciones disponibles.</p>
+                            </div>
+                            <div id="tab2" class="tab-pane fade" role="tabpanel">
+                                <p>Presentación: Por definir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section agata-relacionados">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><div class="section-title text-center"><h3 class="title">Productos relacionados</h3></div></div>
+                @for (var i = 1; i <= 4; i++)
+                {
+                    var imagen = $"product{i:00}.png";
+                    <div class="col-md-3 col-xs-6">
+                        <div class="product">
+                            <div class="product-img"><img src="~/img/@imagen" alt="Producto relacionado de ejemplo @i" /></div>
+                            <div class="product-body">
+                                <p class="product-category">Maquillaje</p>
+                                <h3 class="product-name"><a asp-controller="Productos" asp-action="Detalle">Producto de ejemplo @i</a></h3>
+                                <h4 class="product-price">Precio por definir</h4>
+                                <div class="product-btns">
+                                    <button type="button" class="add-to-wishlist" title="Agregar a favoritos"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="tooltipp">Favoritos</span></button>
+                                    <a asp-controller="Productos" asp-action="Detalle" class="agata-ver-detalle" title="Ver detalle"><i class="fa fa-eye" aria-hidden="true"></i> Ver detalle</a>
+                                </div>
+                            </div>
+                            <div class="add-to-cart"><button type="button" class="add-to-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Agregar al carrito</button></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/agata-detalle.js" asp-append-version="true"></script>
+}

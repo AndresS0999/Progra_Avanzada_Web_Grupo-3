@@ -1,0 +1,67 @@
+@model LoginRequestModel
+
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+
+<section class="section agata-login" aria-labelledby="titulo-login">
+    <div class="container">
+        <div class="agata-login-card">
+            <div class="agata-login-header">
+                <h1 id="titulo-login">Iniciar sesión</h1>
+                <p>Ingresa a tu cuenta para continuar comprando en Agata MakeUp.</p>
+            </div>
+
+            <form asp-action="Login" asp-controller="Cuenta" method="post" class="agata-login-form" novalidate>
+
+                @Html.AntiForgeryToken()
+
+                @if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+                {
+                    <div class="alert alert-danger text-center" role="alert">
+                        @ViewBag.Mensaje
+                    </div>
+                }
+
+                <div class="form-group">
+                    <label asp-for="Correo">Correo electrónico</label>
+                    <input asp-for="Correo" class="input" type="email"
+                           placeholder="ejemplo@correo.com" autocomplete="email" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Contrasena">Contraseña</label>
+                    <div class="agata-login-password">
+                        <input asp-for="Contrasena" class="input" type="password"
+                               placeholder="Ingresa tu contraseña" autocomplete="current-password" />
+                        <button type="button" class="agata-password-toggle" aria-label="Mostrar contraseña">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="recordarme" name="Recordarme" />
+                        <label for="recordarme"><span></span> Recordarme</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn agata-login-boton">
+                    Ingresar
+                </button>
+
+                <div class="agata-login-links">
+                    <a asp-controller="Cuenta" asp-action="Recuperar">¿Olvidaste tu contraseña?</a>
+                    <p>¿No tienes cuenta? <a asp-controller="Cuenta" asp-action="Registro">Crear cuenta</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/agata-login.js" asp-append-version="true"></script>
+}

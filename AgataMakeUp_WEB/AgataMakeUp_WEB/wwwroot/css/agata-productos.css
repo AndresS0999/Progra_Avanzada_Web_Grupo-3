@@ -1,0 +1,234 @@
+/* Catálogo visual de Agata MakeUp: estilos independientes de la plantilla Electro. */
+.agata-catalogo {
+    padding: 28px 0 65px;
+    background: #fcfafb;
+}
+
+    .agata-catalogo .container {
+        max-width: 1170px;
+    }
+
+.agata-migas {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 0 0 26px;
+    font-size: 13px;
+    color: #756b74;
+}
+
+    .agata-migas a {
+        color: #a65d7d;
+    }
+
+.agata-catalogo-encabezado {
+    margin-bottom: 30px;
+}
+
+.agata-catalogo-etiqueta {
+    color: #ad587c;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.agata-catalogo-encabezado h1 {
+    font-size: 32px;
+    margin: 8px 0 9px;
+    color: #292735;
+}
+
+.agata-catalogo-encabezado p {
+    color: #756b74;
+    margin: 0;
+}
+
+.agata-catalogo-layout {
+    display: grid;
+    grid-template-columns: 245px minmax(0,1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.agata-filtros {
+    background: white;
+    border: 1px solid #eedee5;
+    border-radius: 12px;
+    padding: 23px;
+}
+
+    .agata-filtros h2 {
+        font-size: 18px;
+        margin-bottom: 18px;
+        color: #292735;
+    }
+
+.agata-filtro-opciones {
+    display: grid;
+    gap: 14px;
+}
+
+    .agata-filtro-opciones label {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 500;
+        color: #41343e;
+        cursor: pointer;
+    }
+
+    .agata-filtro-opciones input {
+        accent-color: #a65d7d;
+        margin: 0;
+    }
+
+.agata-filtro-nota {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #f0e2e8;
+    font-size: 12px;
+    color: #867781;
+    line-height: 1.6;
+}
+
+.agata-catalogo-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+    .agata-catalogo-barra p {
+        margin: 0;
+        font-size: 13px;
+        color: #756b74;
+    }
+
+.agata-productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 20px;
+}
+
+.agata-producto-card {
+    background: white;
+    border: 1px solid #ead9e1;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s,box-shadow .2s;
+}
+
+    .agata-producto-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 22px rgba(82,49,63,.08);
+    }
+
+    .agata-producto-card[hidden] {
+        display: none;
+    }
+
+.agata-producto-imagen {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #f9f3f6;
+}
+
+    .agata-producto-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.agata-producto-info {
+    padding: 17px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.agata-producto-categoria {
+    color: #ad587c;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+
+.agata-producto-info h3 {
+    margin: 9px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #292735;
+}
+
+.agata-producto-pendiente {
+    font-size: 12px;
+    color: #82767d;
+    margin: 0 0 17px;
+}
+
+.agata-producto-acciones {
+    display: flex;
+    gap: 7px;
+    margin-top: auto;
+}
+
+.agata-btn-detalle {
+    flex: 1;
+    background: #a65d7d;
+    color: white;
+    border-radius: 7px;
+    padding: 11px 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+    .agata-btn-detalle:hover {
+        background: #7e3f5b;
+        color: white;
+    }
+
+.agata-btn-favorito, .agata-btn-carrito {
+    width: 38px;
+    border: 1px solid #e8ccd8;
+    background: white;
+    border-radius: 7px;
+    color: #a65d7d;
+    cursor: pointer;
+}
+
+    .agata-btn-favorito:hover, .agata-btn-carrito:hover {
+        background: #f9e8ef;
+    }
+
+.agata-sin-resultados {
+    margin: 25px 0;
+    color: #746874;
+}
+
+@media(max-width:991px) {
+    .agata-catalogo-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .agata-productos-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:575px) {
+    .agata-productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agata-catalogo-encabezado h1 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Recuperar contraseña";
+}
+
+<link rel="stylesheet" href="~/css/agata-recuperar.css" asp-append-version="true" />
+
+<section class="section agata-recuperar" aria-labelledby="titulo-recuperar">
+    <div class="container">
+        <div class="agata-recuperar-card">
+            <div class="agata-recuperar-header">
+                <h1 id="titulo-recuperar">Recuperar contraseña</h1>
+                <p>Ingresa el correo electrónico asociado a tu cuenta para solicitar la recuperación de tu contraseña.</p>
+            </div>
+
+            
+            <form class="agata-recuperar-form" method="post">
+                <div class="form-group">
+                    <label for="correo-recuperar">Correo electrónico</label>
+                    <input id="correo-recuperar"
+                           name="CorreoElectronico"
+                           class="input"
+                           type="email"
+                           placeholder="ejemplo@correo.com"
+                           autocomplete="email"
+                           required />
+                </div>
+
+                
+                <button type="button" class="primary-btn agata-recuperar-boton">
+                    Enviar solicitud
+                </button>
+
+                <div class="agata-recuperar-links">
+                    <a asp-controller="Cuenta" asp-action="Login">Volver al inicio de sesión</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

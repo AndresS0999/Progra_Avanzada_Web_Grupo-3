@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+<link rel="stylesheet" href="~/css/agata-registro.css" asp-append-version="true" />
+
+<section class="section auth-section agata-registro">
+    <div class="container">
+        <div class="registro-card auth-card">
+            <div class="auth-header text-center">
+                <h2>Crear cuenta</h2>
+                <p>Regístrate para comprar maquillaje, accesorios y productos de Agata MakeUp.</p>
+            </div>
+
+            
+            <form id="registro-form" method="post" autocomplete="on">
+                <div class="registro-grid">
+                    <div class="form-group">
+                        <label for="NombreCompleto">Nombre completo</label>
+                        <input id="NombreCompleto" name="NombreCompleto" class="input" type="text"
+                               placeholder="Ingrese su nombre completo" autocomplete="name" required maxlength="120" />
+                    </div>
+                    <div class="form-group">
+                        <label for="CorreoElectronico">Correo electrónico</label>
+                        <input id="CorreoElectronico" name="CorreoElectronico" class="input" type="email"
+                               placeholder="ejemplo@correo.com" autocomplete="email" required maxlength="254" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefono">Teléfono</label>
+                        <input id="Telefono" name="Telefono" class="input" type="tel"
+                               placeholder="8888-8888" autocomplete="tel" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Direccion">Dirección</label>
+                        <input id="Direccion" name="Direccion" class="input" type="text"
+                               placeholder="Ingrese su dirección" autocomplete="street-address" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Contrasenna">Contraseña</label>
+                        <input id="Contrasenna" name="Contrasenna" class="input" type="password"
+                               placeholder="Cree una contraseña" autocomplete="new-password" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmarContrasenna">Confirmar contraseña</label>
+                        <input id="ConfirmarContrasenna" name="ConfirmarContrasenna" class="input" type="password"
+                               placeholder="Repita su contraseña" autocomplete="new-password" required />
+                    </div>
+                </div>
+
+                
+                <button type="button" class="primary-btn auth-btn registro-btn">Registrarme</button>
+
+                <div class="auth-links text-center registro-links">
+                    <span>¿Ya tienes cuenta?</span>
+                    <a asp-controller="Cuenta" asp-action="Login">Iniciar sesión</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

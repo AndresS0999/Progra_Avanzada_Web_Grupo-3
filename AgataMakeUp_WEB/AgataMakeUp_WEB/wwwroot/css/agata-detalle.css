@@ -1,0 +1,103 @@
+/* Ajustes exclusivos de Detalle de producto; los estilos base son de Electro. */
+.agata-detalle .product-preview {
+    overflow: hidden;
+    background: #fff;
+}
+
+.agata-detalle #product-main-img .product-preview img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+}
+
+.agata-detalle #product-imgs .product-preview img {
+    display: block;
+    width: 100%;
+    height: 95px;
+    object-fit: cover;
+}
+
+.agata-detalle .product-details .product-name {
+    line-height: 1.4;
+}
+
+.agata-detalle-aviso {
+    color: #786e76;
+    font-size: 12px;
+}
+
+.agata-detalle .product-available {
+    display: inline-block;
+    margin: 0 0 15px;
+}
+
+.agata-detalle .product-options select {
+    margin-left: 12px;
+}
+
+.agata-detalle .agata-cantidad-control {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+    .agata-detalle .agata-cantidad-control .qty-up, .agata-detalle .agata-cantidad-control .qty-down {
+        cursor: pointer;
+        padding: 0;
+    }
+
+.agata-detalle .agata-link-button {
+    border: 0;
+    padding: 0;
+    background: none;
+    color: #2b2d42;
+    cursor: pointer;
+}
+
+    .agata-detalle .agata-link-button:hover {
+        color: #ff5b9a;
+    }
+
+.agata-detalle #product-tab .tab-content {
+    min-height: 100px;
+    padding: 10px 0 25px;
+}
+
+.agata-detalle .agata-relacionados .product {
+    min-height: 410px;
+}
+
+.agata-detalle .agata-relacionados .product-img {
+    height: 220px;
+}
+
+    .agata-detalle .agata-relacionados .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.agata-detalle .agata-relacionados .product-body {
+    min-height: 150px;
+}
+
+.agata-detalle .agata-ver-detalle {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+@media(max-width:767px) {
+    .agata-detalle #product-main-img .product-preview img {
+        height: 300px;
+    }
+
+    .agata-detalle #product-imgs .product-preview img {
+        height: 75px;
+    }
+
+    .agata-detalle .agata-relacionados .product-img {
+        height: 170px;
+    }
+}

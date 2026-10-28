@@ -1,0 +1,23 @@
+USE [AgataMakeUpDB]
+GO
+
+CREATE PROCEDURE [dbo].[sp_IniciarSesionUsuario]
+	@Correo		VARCHAR(150),
+	@Contrasena	VARCHAR(300)
+AS
+BEGIN
+
+	SELECT	U.id_usuario	AS IdUsuario,
+			U.nombre		AS Nombre,
+			U.apellido		AS Apellido,
+			U.correo		AS Correo,
+			U.id_rol		AS IdRol,
+			R.nombre_rol	AS NombreRol
+	FROM	dbo.Usuario U
+	INNER JOIN dbo.Rol R ON U.id_rol = R.id_rol
+	WHERE	U.correo = @Correo
+		AND U.contrasena = @Contrasena
+		AND U.estado = 1
+
+END
+GO
